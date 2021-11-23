@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+button{
+  display:inline-block;
+  min-width:20px;
+  min-height:1px;
+  outline:none;
+  border:0;
+}
