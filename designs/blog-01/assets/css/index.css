@@ -1,0 +1,981 @@
+@charset "utf-8";
+
+/* 变量设置 */
+:root{
+  /* 颜色设置 */
+  /* 反色 */
+  --set-color-inverse:rgba(0,0,0,.87);
+  /* 白色 */
+  --set-color-white:#fff;
+  /* 黑色 */
+  --set-color-black:#000;
+  /* 灰色 */
+  --set-color-gray-0:#f9f9fa;
+  --set-color-gray-5:#f0f0f1;
+  --set-color-gray-10:#e1e1e3;
+  --set-color-gray-20:#d2d2d6;
+  --set-color-gray-30:#b4b4bb;
+  --set-color-gray-40:#9696a0;
+  --set-color-gray-50:#787885;
+  --set-color-gray-60:#5a5b6a;
+  --set-color-gray-70:#4a4b57;
+  --set-color-gray-80:#3a3a44;
+  --set-color-gray-90:#292a31;
+  --set-color-gray-100:#19191d;
+  /* 蓝色 */
+  --set-color-blue-5:#ebf2ff;
+  --set-color-blue-10:#d8e6ff;
+  --set-color-blue-20:#c4daff;
+  --set-color-blue-30:#9dc2ff;
+  --set-color-blue-40:#76a9ff;
+  --set-color-blue-50:#4f91ff;
+  --set-color-blue-60:#2979ff;
+  --set-color-blue-70:#2264d1;
+  --set-color-blue-80:#1b4ea3;
+  --set-color-blue-90:#133774;
+  --set-color-blue-100:#0c2146;
+  /* 绿色 */
+  --set-color-green-5:#edf6ee;
+  --set-color-green-10:#dceddd;
+  --set-color-green-20:#cbe5cc;
+  --set-color-green-30:#a9d3ab;
+  --set-color-green-40:#87c289;
+  --set-color-green-50:#65b168;
+  --set-color-green-60:#43a047;
+  --set-color-green-70:#37833b;
+  --set-color-green-80:#2b662e;
+  --set-color-green-90:#1f4921;
+  --set-color-green-100:#132c14;
+  /* 黄色 */
+  --set-color-yellow-5:#fff8ea;
+  --set-color-yellow-10:#fff1d6;
+  --set-color-yellow-20:#ffeac1;
+  --set-color-yellow-30:#ffdc99;
+  --set-color-yellow-40:#ffcf70;
+  --set-color-yellow-50:#ffc147;
+  --set-color-yellow-60:#ffb41f;
+  --set-color-yellow-70:#d1941a;
+  --set-color-yellow-80:#a37314;
+  --set-color-yellow-90:#74520f;
+  --set-color-yellow-100:#463209;
+  /* 红色 */
+  --set-color-red-5:#feedec;
+  --set-color-red-10:#fddcda;
+  --set-color-red-20:#fccbc8;
+  --set-color-red-30:#faa9a3;
+  --set-color-red-40:#f8877f;
+  --set-color-red-50:#f6655a;
+  --set-color-red-60:#f44336;
+  --set-color-red-70:#c8372d;
+  --set-color-red-80:#9c2b23;
+  --set-color-red-90:#6f1f19;
+  --set-color-red-100:#43130f;
+  /* 靛青 */
+  --set-color-indigo-5:#f0f1f9;
+  --set-color-indigo-10:#e1e4f3;
+  --set-color-indigo-20:#d2d6ed;
+  --set-color-indigo-30:#b4bbe2;
+  --set-color-indigo-40:#97a0d6;
+  --set-color-indigo-50:#7985cb;
+  --set-color-indigo-60:#5c6bc0;
+  --set-color-indigo-70:#4c589e;
+  --set-color-indigo-80:#3b457b;
+  --set-color-indigo-90:#2a3158;
+  --set-color-indigo-100:#1a1e35;
+  /* 青色 */
+  --set-color-teal-5:#e8f5f5;
+  --set-color-teal-10:#d1ebec;
+  --set-color-teal-20:#bbe2e2;
+  --set-color-teal-30:#8dcfcf;
+  --set-color-teal-40:#60bcbc;
+  --set-color-teal-50:#33a9a9;
+  --set-color-teal-60:#069697;
+  --set-color-teal-70:#057b7c;
+  --set-color-teal-80:#046061;
+  --set-color-teal-90:#034545;
+  --set-color-teal-100:#02292a;
+  /* 橙色 */
+  --set-color-orange-5:#fef3e7;
+  --set-color-orange-10:#fee8d0;
+  --set-color-orange-20:#fddcb9;
+  --set-color-orange-30:#fdc68b;
+  --set-color-orange-40:#fcaf5c;
+  --set-color-orange-50:#fb982e;
+  --set-color-orange-60:#fb8200;
+  --set-color-orange-70:#ce6b00;
+  --set-color-orange-80:#a05300;
+  --set-color-orange-90:#733c00;
+  --set-color-orange-100:#452400;
+  /* 粉色 */
+  --set-color-pink-5:#fdedf2;
+  --set-color-pink-10:#fbdce6;
+  --set-color-pink-20:#f9cada;
+  --set-color-pink-30:#f6a8c2;
+  --set-color-pink-40:#f285aa;
+  --set-color-pink-50:#ef6292;
+  --set-color-pink-60:#ec407a;
+  --set-color-pink-70:#c23564;
+  --set-color-pink-80:#97294e;
+  --set-color-pink-90:#6c1e38;
+  --set-color-pink-100:#411222;
+
+  /* 线性渐变 */
+  /* 黑色 */
+  --set-gradient-black:linear-gradient(90deg,
+  var(--set-color-gray-40),
+  var(--set-color-gray-60));
+  /* 蓝色转靛青 */
+  --set-gradient-blue-indigo: linear-gradient(90deg,
+  var(--set-color-blue-60),
+  var(--set-color-indigo-70));
+  /* 绿色转青色 */
+  --set-gradient-green-teal:linear-gradient(90deg,
+  var(--set-color-green-60),
+  var(--set-color-teal-70));
+  /* 红色转粉色 */
+  --set-gradient-red-pink:linear-gradient(90deg,
+  var(--set-color-red-60),
+  var(--set-color-pink-70));
+  /* 黄色转橙色 */
+  --set-gradient-yellow-orange:linear-gradient(90deg,
+  var(--set-color-yellow-60),
+  var(--set-color-orange-70));
+  /* 高亮色 */
+  /* 亮黑 */
+  --set-gradient-light-black:linear-gradient(90deg,
+  var(--set-color-gray-10),
+  var(--set-color-gray-30));
+  /* 亮蓝靛青 */
+  --set-gradient-light-blue-indigo:linear-gradient(90deg,
+  var(--set-color-blue-10),
+  var(--set-color-indigo-30));
+  /* 亮绿青色 */
+  --set-gradient-light-green-teal:linear-gradient(90deg,
+  var(--set-color-green-10),
+  var(--set-color-teal-30));
+  /* 亮红粉色 */
+  --set-gradient-light-red-pink:linear-gradient(90deg,
+  var(--set-color-red-10),
+  var(--set-color-pink-30));
+  /* 亮黄橙色 */
+  --set-gradient-light-yellow-orange:linear-gradient(90deg,
+  var(--set-color-yellow-10),
+  var(--set-color-orange-30));
+  /* 反色 */
+  /* 反黑色 */
+  --set-gradient-reverse-black:linear-gradient(90deg,
+  var(--set-color-gray-60),
+  var(--set-color-gray-40));
+  /* 反蓝靛青 */
+  --set-gradient-reverse-blue-indigo:linear-gradient(90deg,
+  var(--set-color-indigo-70),
+  var(--set-color-blue-60));
+  /* 反绿青 */
+  --set-gradient-reverse-green-teal:linear-gradient(90deg,
+  var(--set-color-teal-70),
+  var(--set-color-green-60));
+  /* 反红粉色 */
+  --set-gradient-reverse-red-pink:linear-gradient(90deg,
+  var(--set-color-pink-70),
+  var(--set-color-red-60));
+  /* 反黄橙 */
+  --set-gradient-reverse-yellow-orange:linear-gradient(90deg,
+  var(--set-color-orange-70),
+  var(--set-color-yellow-60));
+  /* 反高亮色 */
+  --set-gradient-light-reverse-black:linear-gradient(90deg,
+  var(--set-color-gray-30),
+  var(--set-color-gray-10));
+  /* 反高亮蓝靛青 */
+  --set-gradient-light-reverse-blue-indigo:linear-gradient(90deg,
+  var(--set-color-indigo-30),
+  var(--set-color-blue-10));
+  /* 反高亮绿青 */
+  --set-gradient-light-reverse-green-teal:linear-gradient(90deg,
+  var(--set-color-teal-30),
+  var(--set-color-green-10));
+  /* 反高亮红粉色 */
+  --set-gradient-light-reverse-red-pink:linear-gradient(90deg,
+  var(--set-color-pink-30),
+  var(--set-color-red-10));
+  /* 反高亮黄橙色 */
+  --set-gradient-light-reverse-yellow-orange:linear-gradient(90deg,
+  var(--set-color-orange-30),
+  var(--set-color-yellow-10));
+
+  /* 基础性设置 */
+  /* 根字体大小，给其他 rem 单位提供基础单位 */
+  --set-baseline-rem:24px;
+  /* 基础的字体大小 */
+  --set-base-font-size:0.66666667rem;
+  /* 基础字体颜色 heading */
+  --set-base-color:var(--set-color-inverse);
+  /* 基础字体 */
+  /* --set-font-family-base: Heebo, system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; */
+  --set-font-family-base: Heebo, Roboto, sans-serif;
+  /* 头部字体 heading */
+  --set-font-family-headers: Heebo, sans-serif;
+
+  /* h1,h2,h3,h4,h5,h6 字体颜色 */
+  --set-h1-color:var(--set-base-color);
+  --set-h2-color:var(--set-base-color);
+  --set-h3-color:var(--set-base-color);
+  --set-h4-color:var(--set-base-color);
+  --set-h5-color:var(--set-base-color);
+  --set-h6-color:var(--set-base-color);
+  /* h1,h2,h3,h4,h5,h6 字体粗细 */
+  --set-h1-font-weight:600;
+  --set-h2-font-weight:600;
+  --set-h3-font-weight:600;
+  --set-h4-font-weight:600;
+  --set-h5-font-weight:600;
+  --set-h6-font-weight:500;
+  /* h1,h2,h3,h4,h5,h6 字体 */
+  --set-h1-font-family:var(--set-font-family-headers);
+  --set-h2-font-family:var(--set-font-family-headers);
+  --set-h3-font-family:var(--set-font-family-headers);
+  --set-h4-font-family:var(--set-font-family-headers);
+  --set-h5-font-family:var(--set-font-family-headers);
+  --set-h6-font-family:var(--set-font-family-headers);
+  /* h1,h2,h3,h4,h5,h6 字体大小 */
+  --set-h1-font-size:4rem;
+  --set-h2-font-size:2.5rem;
+  --set-h3-font-size:2rem;
+  --set-h4-font-size:1.4167rem;
+  --set-h5-font-size:1rem;
+  --set-h6-font-size:0.833333rem;
+  /* h1,h2,h3,h4,h5,h6 行盒高度 */
+  --set-h1-line-height:4.66666667rem;
+  --set-h2-line-height:3.33333333rem;
+  --set-h3-line-height:2.33333333rem;
+  --set-h4-line-height:1.83333333rem;
+  --set-h5-line-height:1.5rem;
+  --set-h6-line-height:1.33333333rem;
+  /* h1,h2,h3,h4,h5,h6 字间距 */
+  --set-h1-letter-spacing:-2.5px;
+  --set-h2-letter-spacing:-1.5px;
+  --set-h3-letter-spacing:-0.5px;
+  --set-h4-letter-spacing:0;
+  --set-h5-letter-spacing:0;
+  --set-h6-letter-spacing:0.15px;
+  /* p 标签字体颜色 */
+  --set-p-color:var(--set-base-color);
+  /* p 标签字体粗细*/
+  --set-p-font-weight:normal;
+  /* p 标签字体大小 */
+  --set-p-font-size:var(--set-base-font-size);
+  /* p 标签行盒高度 */
+  --set-p-line-height:1rem;
+  /* p 标签内字间隔 */
+  --set-p-letter-spacing:0.44px;
+  --set-dense-radio-circle:0.6666667rem;
+}
+
+body,
+html{
+  /* 基础性 margin，padding 设置 */
+  margin: 0;
+  padding: 0;
+  /* 默认字体 */
+  font-family: var(--set-font-family-base);
+}
+html{
+  /* 根字体颜色 */
+  color: var(--set-base-color);
+  /* 根字体大小 */
+  font-size: var(--set-baseline-rem);
+}
+body{
+  /* body 字体颜色 */
+  color: rgba(var(--set-base-color), .87);
+  /* body 字体大小 */
+  font-size: var(--set-base-font-size);
+  /* body 字体粗细 */
+  font-weight: 400;
+  /* body 字体间隔 */
+  letter-spacing: .44px;
+  /* body 行盒高度 */
+  line-height: 1rem;
+}
+body p{
+  /* 所有 p 标签默认属性 */
+  /* p 字体 */
+  color: var(--set-p-color);
+  /* p 字体大小 */
+  font-size: var(--set-p-font-size);
+  /* p 字体粗细 */
+  font-weight: var(--set-p-font-weight);
+  /* p 字体间距 */
+  letter-spacing: var(--set-p-letter-spacing);
+  /* p 行盒高度 */
+  line-height: var(--set-p-line-height);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* h1 字体颜色 */
+  color: var(--set-h1-color);
+  /* h1 字体 */
+  font-family: var(--set-h1-font-family);
+  /* h1 字体大小 */
+  font-size: var(--set-h1-font-size);
+  /* h1 字体粗细 */
+  font-weight: var(--set-h1-font-weight);
+  /* h1 字体间距 */
+  letter-spacing: var(--set-h1-letter-spacing);
+  /* h1 行盒高度 */
+  line-height: var(--set-h1-line-height);
+  /* webkit 兼容性 */
+  -webkit-margin-after:1rem;
+  -webkit-margin-before:0;
+  /* 逻辑块结束边距  */
+  margin-block-end: 1rem;
+  /* 逻辑块开始边距 */
+  margin-block-start: 0;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* h2 字体颜色 */
+  color: var(--set-h2-color);
+  /* h2 字体 */
+  font-family: var(--set-h2-font-family);
+  /* h2 字体大小 */
+  font-size: var(--set-h2-font-size);
+  /* h2 字体粗细 */
+  font-weight: var(--set-h2-font-weight);
+  /* h2 字体间距 */
+  letter-spacing: var(--set-h2-letter-spacing);
+  /* h2 行盒高度 */
+  line-height: var(--set-h2-line-height);
+}
+h3,
+h4,
+h5,
+h6 {
+  /* h3 字体颜色 */
+  color: var(--set-h3-color);
+  /* h3 字体 */
+  font-family: var(--set-h3-font-family);
+  /* h3 字体大小 */
+  font-size: var(--set-h3-font-size);
+  /* h3 字体粗细 */
+  font-weight: var(--set-h3-font-weight);
+  /* h3 字体间距 */
+  letter-spacing: var(--set-h3-letter-spacing);
+  /* h3 行盒高度 */
+  line-height: var(--set-h3-line-height);
+}
+h4,
+h5,
+h6 {
+  /* h4 字体颜色 */
+  color: var(--set-h4-color);
+  /* h4 字体 */
+  font-family: var(--set-h4-font-family);
+  /* h4 字体大小 */
+  font-size: var(--set-h4-font-size);
+  /* h4 字体粗细 */
+  font-weight: var(--set-h4-font-weight);
+  /* h4 字体间距 */
+  letter-spacing: var(--set-h4-letter-spacing);
+  /* h4 行盒高度 */
+  line-height: var(--set-h4-line-height);
+}
+h5,
+h6 {
+  /* h5 字体颜色 */
+  color: var(--set-h5-color);
+  /* h5 字体 */
+  font-family: var(--set-h5-font-family);
+  /* h5 字体大小 */
+  font-size: var(--set-h5-font-size);
+  /* h5 字体粗细 */
+  font-weight: var(--set-h5-font-weight);
+  /* h5 字体间距 */
+  letter-spacing: var(--set-h5-letter-spacing);
+  /* h5 行盒高度 */
+  line-height: var(--set-h5-line-height);
+}
+h6 {
+  /* h6 字体颜色 */
+  color: var(--set-h6-color);
+  /* h6 字体 */
+  font-family: var(--set-h6-font-family);
+  /* h6 字体大小 */
+  font-size: var(--set-h6-font-size);
+  /* h6 字体粗细 */
+  font-weight: var(--set-h6-font-weight);
+  /* h6 字体间距 */
+  letter-spacing: var(--set-h6-letter-spacing);
+  /* h6 行盒高度 */
+  line-height: var(--set-h6-line-height);
+  /* 逻辑块结束边距 */
+  -webkit-margin-after:.5rem;
+  margin-block-end:.5rem
+}
+
+/* 页面包装纸,只包含一个元素: 页面容器 */
+.page-wrapper{
+  height: unset;
+}
+/* 页面容器,是页面其他元素的容器 */
+.main-container{
+  /* 高度 未设置的，防止被重写 */
+  height: unset;
+  /* 背景色 */
+  background: var(--set-color-white);
+  /* 高度 100vh 页面所有高度, 不会生效*/
+  height: 100vh;
+}
+
+.set-appbar-container{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content:center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  min-height: 2rem;
+  background: var(--set-color-white);
+}
+
+.mat-tab-nav-bar{
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.set-appbar-container .mat-tab-nav-bar{
+  margin-right: 4rem;
+  margin-top: 27px;
+}
+
+.mat-tab-links > .mat-tab-link:not(:last-child){
+  margin-right: 33px;
+}
+
+.mat-tab-link{
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: var(--set-font-family-headers);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 29px;
+  color: var(--set-color-black);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: color .2s linear;
+}
+.mat-tab-link:not(.mat-tab-link-active):hover, .mat-tab-link.mat-tab-link-active{
+  color: var(--set-color-red-50);
+}
+.mat-tab-link.mat-tab-link-active{
+  cursor: default;
+  pointer-events: none;
+}
+
+.mat-drawer-container{
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  background-color: var(--set-color-white);
+}
+
+.mat-drawer-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 160px;
+}
+.mat-drawer-content.main-container{
+  margin-top: 100px;
+}
+
+.set-about-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.introduce-container{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.set-about-container .about {
+  margin-right: 106px;
+}
+
+.set-about-container .about .whoami{
+  font-size: 44px;
+  line-height: 60px;
+  letter-spacing: .6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.set-about-container .about .introduction{
+  line-height: 24px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.set-about-container .mat-avatar-container{
+  position: relative;
+}
+.set-about-container .mat-avatar-container .mat-avatar-backdrop{
+  width: 243px;
+  height: 243px;
+  /* background-color: #EDF7FA; */
+  background-color: var(--set-color-teal-10);
+  border-radius: 50%;
+  position: absolute;
+  left: -5px;
+  bottom: -13px;
+  z-index: -1;
+}
+.set-about-container .mat-avatar-container .mat-avatar{
+  width: 243px;
+  height: 243px;
+  max-width: 243px;
+  max-height: 243px;
+  background-image: url('../images/avatar.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.mat-button{
+  display: block;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  background-color: var(--set-color-white);
+  color: var(--set-color-inverse);
+  font-family: var(--set-font-family-headers);
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: .1px;
+  line-height: 1rem;
+}
+
+.set-about-container .mat-button{
+  width: 208px;
+  height: 47px;
+  margin-top: 11px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--set-color-red-50);
+  color: var(--set-color-white);
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.mat-post-recent-wrapper{
+  /* background-color: #EDF7FA; */
+  background-color: var(--set-color-teal-10);
+  margin-top: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mat-post-recent-container{
+  position: relative;
+  padding-bottom: 32px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.mat-post-recent-links{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 7px;
+}
+
+.mat-post-recent{
+  color: var(--set-color-teal-50);
+  text-decoration: none;
+  line-height: 23.5px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.mat-post-recent-title{
+  font-size: 22px;
+  line-height: 60px;
+  color: var(--set-color-black);
+  font-weight: 400;
+  letter-spacing: .1px;
+}
+
+.mat-post-recent-wrapper .mat-post-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.mat-post-recent-wrapper .mat-post{
+  background-color: var(--set-color-white);
+  padding: 15px;
+}
+
+.mat-post-title{
+  margin: 0;
+  font-size: 26px;
+  line-height: 38.19px;
+  font-weight: 700;
+  letter-spacing: .1px;
+}
+
+.mat-post-publish{
+  margin: 0;
+  margin-top: 17px;
+  font-size: 18px;
+  line-height: 26.44px;
+  display: flex;
+  align-items: center;
+}
+
+.mat-post-publish .mat-split{
+  display: inline-block;
+  width: 1px;
+  height: 21px;
+  background-color: var(--set-color-black);
+  margin: 0 26px;
+}
+
+.mat-post-introduction{
+  margin: 0;
+  margin-top: 11px;
+  font-size: 16px;
+  line-height: 23.5px;
+}
+
+.mat-featured-works-container{
+  margin-top: 15px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+.mat-post-list-header .mat-post-list-header-invisible, .mat-featured-works-header .mat-featured-works-header-invisible{
+  display: none;
+  visibility: hidden;
+}
+
+.mat-post-list-title, .mat-featured-works-title{
+  margin: 0;
+  font-size: 22px;
+  line-height: 60px;
+  color: var(--set-color-black);
+  font-weight: 400;
+  letter-spacing: .1px;
+}
+
+.mat-post-list-title.mat-post-list-header-heading,  .mat-featured-works-title.mat-featured-works-header-heading{
+  font-size: 44px;
+  margin-bottom: 55px;
+}
+
+.mat-work-container{
+  margin-top: 11px;
+}
+
+.mat-work{
+  padding: 30px 0px;
+  border-bottom: 1px solid var(--set-color-gray-5);
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.mat-work-container .mat-work:first-child{
+  padding-top: 0;
+}
+
+.mat-work-cover{
+  width: 246px;
+  height: 180px;
+  min-width: 246px;
+  min-height: 180px;
+  border-radius: 6px;
+  margin-right: 1rem;
+  background: var(--set-gradient-light-reverse-red-pink);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.mat-work-header{
+  font-size: 30px;
+  line-height: 44.06px;
+  font-weight: 700;
+}
+
+.mat-work-link{
+  text-decoration: none;
+  color: inherit;
+  transition: color .3s ease, text-decoration .3s linear;
+}
+
+.mat-work-header .mat-work-link:hover{
+  text-decoration:underline;
+  color: var(--set-color-red-50);
+}
+
+.mat-work-tag-list > *:not(:last-child){
+  margin-right: 26px;
+}
+
+.mat-work-tag-list .mat-tag{
+  display: inline-block;
+  font-size: 20px;
+  line-height: 20px;
+  color: #8695A4;
+}
+
+.mat-work-tag-list .mat-tag-time{
+  display: inline-block;
+  background-color: #142850;
+  padding: 2px 10px;
+  border-radius: 16px;
+  color: var(--set-color-white);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.set-icon{
+  fill:currentColor;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+.mat-icon-button .set-icon{
+  width: 30px;
+  height: 30px;
+}
+
+.set-footer-container{
+  margin-top: 83px;
+  margin-bottom: 148px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-icon-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 35px;
+}
+.footer-icon-list .mat-icon-button .set-icon:hover{
+  /* color: #EDF7FA; */
+  color: var(--set-color-teal-50);
+}
+.copyright-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 26px auto 54px;
+  text-align: center;
+}
+
+.mat-mobile-appbar{
+  display: none;
+  width: 100%;
+  height: 50px;
+  justify-content: flex-end;
+  align-items: center;
+  top: 0;
+  position: fixed;
+  z-index: 3;
+}
+
+.mat-mobile-appbar-backdrop{
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background-color: var(--set-color-white);
+}
+
+.mat-mobile-appbar .mat-button{
+  margin-right: 18px;
+}
+
+.mat-work-detail{
+  padding: 15px;
+}
+
+.mat-work-detail .mat-work-header{
+  letter-spacing: .1px;
+}
+
+.mat-work-content img{
+  width: 681px;
+  height: 460px;
+}
+
+@media (max-width: 670px) {
+  .mat-mobile-appbar{
+    display: flex;
+  }
+  .mat-drawer-content{
+    margin-top: 33px;
+  }
+  .mat-tab-nav-bar{
+    display: none;
+  }
+  .set-about-container{
+    /* padding:0 23px; */
+    align-items: center;
+  }
+  .introduce-container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .set-about-container .about{
+    margin-right: 0;
+    order: 2;
+    padding: 0 23px;
+    word-break: break-word;
+    margin-top: 50px;
+    text-align: center;
+  }
+  .set-about-container .about .whoami{
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .set-about-container .mat-avatar-wrapper{
+    order: 1;
+  }
+  .mat-post-recent-links{
+    justify-content: center;
+    align-items: center;
+  }
+  .mat-post-recent-links .mat-post-recent{
+    display: none;
+  }
+  .mat-post-recent-links .mat-post-recent.mat-post-recent-title{
+    display: block;
+  }
+
+  .mat-post-title{
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .mat-post-publish, .mat-post-introduction{
+    font-size: 16px;
+  }
+
+  .mat-post-recent-wrapper .mat-post-container{
+    grid-template-columns: 1fr;
+  }
+  .mat-post-recent-wrapper .mat-post{
+    margin: 11px;
+    border-radius: 4px;
+  }
+
+  .mat-featured-works-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mat-featured-works-title{
+    font-size: 18px;
+    line-height: 60px;
+  }
+
+  .mat-work, .mat-featured-works-header{
+    flex-wrap: wrap;
+    padding: 0 18px;
+  }
+
+  .mat-featured-works-header{
+    justify-content: flex-start;
+  }
+
+  .mat-work:not(:first-child){
+    margin-top: 17px;
+  }
+
+  .mat-work-cover{
+    width: 100%;
+    height: 230px;
+  }
+
+  .mat-work-header{
+    font-size: 24px;
+    line-height: 30px;
+  }
+  
+  .mat-work-tag-list > *:not(:last-child){
+    margin-right: 22px;
+  }
+
+  .mat-work-tag-list .mat-tag{
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .mat-work-content img{
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 671px){
+  .set-about-container,
+  .mat-post-recent-container,
+  .mat-featured-works-container,
+  .mat-work-detail {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width:1024px) {
+  .set-about-container,
+  .mat-post-recent-container,
+  .mat-featured-works-container,
+  .mat-work-detail{
+    max-width: 1150px;
+    padding-left: 148px;
+    padding-right: 148px;
+  }
+
+  .set-appbar-container .mat-tab-nav-bar{
+    max-width: 1150px;
+  }
+
+}
