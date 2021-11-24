@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>input</title>
+    <base href="/" target="_blank">
+    <style>
+      label{
+        display: block;
+        font: 1rem 'Fira Sans', sans-serif;
+      }
+      input,label{
+        margin: .4rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="name">Name (4 to 8 characters):</label>
+      <input type="text" id="name" required minlength="4" maxlength="8" size="10">
+    </div>
+    <div>
+      <input type="button" value="button">
+    </div>
+    <div>
+      <input type="checkbox" value="checkbox">checkbox
+    </div>
+    <ul>
+      <li><input type="color">color</li>
+      <li><input type="date">date</li>
+      <li><input type="datetime-local">datetime-local</li>
+      <li><input type="time">time</li>
+      <li><input type="week">week</li>
+      <li><input type="email">email</li>
+      <li><input type="number">number</li>
+      <li><input type="password">password</li>
+      <li><input type="radio" value="1">radio</li>
+      <li><input type="search">search</li>
+      <li><input type="text" value="x1"></li>
+      <li><input type="tel">tel</li>
+      <li><input type="url">url</li>
+      <li><input type="rang" minlength="1" maxlength="10">rang</li>
+      <li><input type="hiddent">hidden</li>
+      <li><input type="reset" value="reset"></li>
+      <li><input type="submit" value="submit"></li>
+    </ul>
+    <script>
+      const nameInput = document.querySelector('#name');
+      nameInput.addEventListener('input', () => {
+        nameInput.setCustomValidity('');
+        nameInput.checkValidity();
+      });
+      nameInput.addEventListener('invalid', () => {
+        if(nameInput.value === '') {
+          nameInput.setCustomValidity('Enter your username!');
+        } else {
+          nameInput.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
+        }
+      });
+    </script>
+  </body>
+</html>

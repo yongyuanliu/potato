@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>optgroup</title>
+    <base href="/" target="_blank">
+    <style>
+      meter{
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="dino-select">Choose a dinosaur:</label>
+    <select id="dino-select">
+      <optgroup label="Theropods">
+        <option>Tyrannosaurus</option>
+        <option>Velociraptor</option>
+        <option>Deinonychus</option>
+      </optgroup>
+      <optgroup label="Sauropods">
+        <option>Diplodocus</option>
+        <option>Saltasaurus</option>
+        <option>Apatosaurus</option>
+      </optgroup>
+    </select>
+    <select>
+      <optgroup label="Group 1">
+        <option>Option 1.1</option>
+      </optgroup>
+      <optgroup label="Group 2">
+        <option>Option 2.1</option>
+        <option>Option 2.2</option>
+        <option>Option 2.3</option>
+      </optgroup>
+      <optgroup label="Group 3" disabled>
+        <option>Option 3.1</option>
+        <option>Option 3.2</option>
+      </optgroup>
+    </select>
+    <script>
+      const dinoSelect = document.querySelector('#dino-select');
+      dinoSelect.onchange = (event) => {
+        console.log(dinoSelect.value);
+      }
+    </script>
+  </body>
+</html>

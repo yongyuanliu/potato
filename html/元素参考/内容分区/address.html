@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+    <base href="/">
+    <title> &lt;address&gt; </title>
+    <style type="text/css">
+      a[href^="mailto"]::before{
+        content: "📧 ";
+      }
+      a[href^="tel"]::before{
+        content: "📞 ";
+      }
+    </style>
+  </head>
+  <body>
+    <p>联系作者：</p>
+    <address>
+      <a href="mailto:biglinex@163.com">biglinex@163.com</a>
+      <a href="tel:+13115552368">(311) 555-2368</a>
+    </address>
+x
+    <hr>
+
+    <p>address 表示一篇文章的作者联系方式</p>
+    <article>
+      <header>
+        <h2>&lt;address&gt;文章作者联系方式</h2>
+      </header>
+      <section>内容</section>
+      <footer>
+        <address>
+          联系作者：<a href="/concat">联系地址</a><br>
+          有任何 bugs，请邮件知会<a href="mailto:webmaster@somedomain.com">webmaster</a><br>
+          您可以直接来访：Mozilla Foundation<br>
+          331 E Evelyn Ave<br>
+          Mountain View, CA 94041<br>
+          USA
+        </address>
+      </footer>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+    <base href="/">
+    <title>&lt;header&gt;</title>
+    <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="https://interactive-examples.mdn.mozilla.net/media/fonts/FiraSans-Regular.woff2">
+    <link rel="preload" as="font" type="font/ttf" crossorigin="anonymous" href="https://interactive-examples.mdn.mozilla.net/media/fonts/DancingScript-Regular.ttf">
+    <style>
+      @font-face {
+        font-family: 'Dancing Script';
+        src: url(https://interactive-examples.mdn.mozilla.net/media/fonts/DancingScript-Regular.ttf);
+      }
+      @font-face {
+        font-family: 'Fira Sans';
+        src: url(https://interactive-examples.mdn.mozilla.net/media/fonts/FiraSans-Regular.woff2);
+      }
+
+      .page-header{
+        background: no-repeat left/cover url('https://interactive-examples.mdn.mozilla.net/media/examples/puppy-header-logo.jpg');
+        display: flex;
+        height: 120px;
+        min-width: 120px;
+        align-items:center;
+        color: #fff;
+        text-shadow: #000 0 0 .2em;
+      }
+      .page-header > h2{
+        font: bold calc(1em + 2 * (100vw - 120px) / 100) 'Dancing Script', cursive, fantasy;
+        margin: 2%;
+      }
+      main{
+        font: 1rem 'Fira Sans', sans-serif;
+      }
+      textarea{
+        width: 800px;
+        height: 200px;
+        font: 1rem 'Fira Sans', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>header</h1>
+    <hr>
+    <header class="page-header">
+      <h2>Cute Puppies Express!</h2>
+    </header>
+    <main>
+      你好
+      <p>I love beagles <em>so</em> much! Like, really, a lot. They’re adorable and their ears are so, so snuggly soft!</p>
+    </main>
+    <hr>
+    <textarea>
+      <header>
+        <h1>主标题页面</h1>
+        <img src="logo.png" alt="MDN logo">
+      </header>
+    </textarea>
+    <hr>
+    <article>
+      <header>
+        <h2>The Planet Earth</h2>
+        <p>Posted on Wednesday, 4 October 2017 by Jane Smith</p>
+      </header>
+      <p>We live on a planet that's blue and green, with so many things still unseen.</p>
+      <p><a href="https://janesmith.com/the-planet-earth/">Continue reading....</a></p>
+    </article>
+    <textarea>
+      <article>
+        <header>
+          <h2>The Planet Earth</h2>
+          <p>Posted on Wednesday, 4 October 2017 by Jane Smith</p>
+        </header>
+        <p>We live on a planet that's blue and green, with so many things still unseen.</p>
+        <p><a href="https://janesmith.com/the-planet-earth/">Continue reading....</a></p>
+      </article>
+    </textarea>
+  </body>
+</html>

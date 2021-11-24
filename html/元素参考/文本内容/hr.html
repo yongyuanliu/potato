@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/" target="_blank">
+    <title>hr</title>
+    <style>
+      section{
+        margin: 3rem 0;
+      }
+      hr{
+        border: none;
+        border-top: 3px double #333;
+        color: #333;
+        overflow: visible;
+        text-align: center;
+        height: 5px;
+      }
+      hr::after{
+        background: #fff;
+        content: '§';
+        padding: 0 4px;
+        position: relative;
+        top: -13px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <p>
+        This is the first paragraph of text.
+        This is the first paragraph of text.
+        This is the first paragraph of text.
+        This is the first paragraph of text.
+      </p>
+      <hr>
+      <p>
+        This is the second paragraph of text.
+        This is the second paragraph of text.
+        This is the second paragraph of text.
+        This is the second paragraph of text.
+      </p>
+    </section>
+    <section>
+      <p>§1: The first rule of Fight Club is: You do not talk about Fight Club.</p>
+      <hr>
+      <p>§2: The second rule of Fight Club is: Always bring cupcakes.</p>
+    </section>
+  </body>
+</html>

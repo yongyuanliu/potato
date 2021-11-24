@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <base target="_blank" href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="author" content="liuyongyuan">
+    <title>&lt;meta&gt;元素</title>
+  </head>
+  <body>
+    <h1>&lt;meta&gt;文档级元数据元素</h1>
+    表示不能由其它 HTML 相关（meta-related）元素（base、link、title、style 或 script）之一表示的任何元数据信息。<br>
+    meta 是一个空元素 <br>
+    meta 是一个 void 元素，必须有开标签，而闭标签可以省略。<br>
+    DOM 接口：HTMLMetaElement。<br>
+    <p>      
+      meta 元素定义的元数据的类型包括以下几种：<br>
+      如果设置了 name 属性，meta 元素提供的是 文档级别（document-level）的元数据，应用于整个页面。<br>
+      如果设置了 http-equive 属性，meta 元素则是编译指令，提供的信息类似命名的 HTTP 头部相同。<br>
+      如果设置了 charset 属性，meta 元素则是一个字符集，告诉文档使用哪种字符编码。<br>
+      如果设置了 itemprop ，meta 元素提供用户定义的元数据 <br>
+    </p>
+    <p>
+      meta 属性：<br>
+      在同一个 meta 中，name，http-equive或者 charset 三者中任何一个属性存在时，itemprop 属性不能被使用。<br>
+      charset：这个属性声明了文档的字符编码。<br>
+      content：此属性包含 http-equive 或 name 属性的值，具体取决于所使用的值。<br>
+      http-equive：属性定义了一个编译指令，这个属性叫做 http-equive(alent) 是因为所有允许的值都是特定 HTTP 头部的名称，如下：
+      <p>
+        content-security-policy: 它允许页面作者定义当前页的内容策略，内容策略主要指定允许的服务器和脚本端点，这有助于防止跨脚本站点脚本攻击。<br>
+        contet-type：如果使用这个属性，其值必须是“text/html；charset=utf-8”。注意该属性只能用于 MIMEType 为 text/html 的文档不能用于 MIME 类型为 XML 的文档。<br>
+        default-style：设置默认 css 样式表组的名称。<br>
+        x-ua-compatible：如果指定，则content 属性必须具有值“IE=edge”，用户代理必须忽略此指示。<br>
+        refresh：这个属性如果指定：
+          如果 content 只包含一个正整数，则重载页面的时间间隔（秒）<br>
+          如果 content 包含一个正整数，并且后面跟着字符串';url='和一个合法的 URL ，则是重定向到指定链接的时间间隔（秒）<br>
+          name：name 和 content 属性可以一起使用，以 名-值 对的方式给文档提供元数据，其中 name 作为元数据的名称，content 作为元数据的值。
+      </p>
+    </p>
+  </body>
+</html>

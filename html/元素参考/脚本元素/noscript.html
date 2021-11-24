@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>noscript</title>
+    <base href="/" target="_blank">
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <noscript>
+      请启用 javascript 以获得更好的浏览体验
+    </noscript>
+    <canvas id="canvas" width="300" height="300">
+      抱歉，您的浏览器不支持canvas元素
+      （这些内容将会在不支持<canvas>元素的浏览器或是禁用了JavaScript的浏览器内渲染并展现）
+    </canvas>
+
+    <script>
+      const canvas = document.querySelector('#canvas');
+      var ctx = canvas.getContext('2d');
+      ctx.fillStyle = 'green';
+      ctx.fillRect(10, 10, 100, 100);
+    </script>
+  </body>
+</html>

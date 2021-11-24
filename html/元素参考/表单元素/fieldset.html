@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>fieldset</title>
+    <base href="/" target="_blank">
+    <style>
+      legend{
+        background-color: #000;
+        color: #fff;
+        padding: 3px 6px;
+      }
+      .output{
+        font: 1rem 'Fira Sans', sans-serif;
+      }
+
+      .input{
+        margin: .4rem;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Choose your favorite monster</legend>
+
+      <input type="radio" id="kraken" name="monster">
+      <label for="kraken">kraken</label><br/>
+
+      <input type="radio" id="sasquatch" name="monster">
+      <label for="sasquatch">Sasquatch</label><br/>
+
+      <input type="radio" id="mothman" name="monster">
+      <label for="mothman">Mothman</label>
+
+    </fieldset>
+
+    <form action="#">
+      <fieldset disabled>
+        <legend>Disabled fieldset</legend>
+        <div>
+          <label for="name">Name: </label>
+          <input type="text" id="name" value="Chris">
+        </div>
+        <div>
+          <label for="pwd">Archetype: </label>
+          <input type="password" id="pwd" value="Wookie">
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>

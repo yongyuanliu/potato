@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>progress</title>
+    <base href="/" target="_blank">
+    <style>
+      .d1{
+        border: 1px solid #aaa;
+        border-radius: 4px;
+        padding: .5em .5em 0;
+      }
+      .d1 summary{
+        font-weight: bold;
+        margin: -.5em -.5em 0;
+        padding: .5em;
+      }
+      .d1[open]{
+        padding: .5em;
+      }
+      .d1[open] summary{
+        border-bottom: 1px solid #aaa;
+        margin-bottom: .5em;
+      }
+
+      .system {
+        font: 16px "Open Sans", "Arial", sans-serif;
+        width: 620px;
+      }
+
+      .system > summary {
+        padding: 2px 6px;
+        width: 15em;
+        background-color: #ddd;
+        border: none;
+        box-shadow: 3px 3px 4px black;
+      }
+
+      .system > p {
+        border-radius: 0 0 10px 10px;
+        background-color: #ddd;
+        padding: 2px 6px;
+        margin: 0;
+        box-shadow: 3px 3px 4px black;
+      }
+
+      .inactive {
+        font: 16px "Open Sans", "Arial", sans-serif;
+        width: 620px;
+      }
+
+      .inactive > summary {
+        padding: 2px 6px;
+        width: 15em;
+        background-color: #ddd;
+        border: none;
+        box-shadow: 3px 3px 4px black;
+        list-style: none;
+      }
+
+      .inactive > summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .inactive > p {
+        border-radius: 0 0 10px 10px;
+        background-color: #ddd;
+        padding: 2px 6px;
+        margin: 0;
+        box-shadow: 3px 3px 4px black;
+      }
+    </style>
+  </head>
+  <body>
+    <details>
+      <summary>Details</summary>
+      Someting small enough to escape casual notice.
+    </details>
+    <hr>
+    <details class="d1">
+      <summary>Details</summary>
+      Someting small enough to escape casual notice.
+    </details>
+    <hr>
+    <details class="system">
+      <summary>System Requirements</summary>
+      <p>Requires a computer running an operating system. The computer
+      must have some memory and ideally some kind of long-term storage.
+      An input device as well as some form of output device is
+      recommended.</p>
+    </details>
+    <hr>
+    <details class="inactive">
+      <summary>System Requirements</summary>
+      <p>Requires a computer running an operating system. The computer
+      must have some memory and ideally some kind of long-term storage.
+      An input device as well as some form of output device is
+      recommended.</p>
+    </details>
+    <hr>
+    <details open class="inactive">
+      <summary>System Requirements</summary>
+      <p>Requires a computer running an operating system. The computer
+      must have some memory and ideally some kind of long-term storage.
+      An input device as well as some form of output device is
+      recommended.</p>
+    </details>
+    <hr>
+    <details class="inactive">
+      <summary>System Requirements</summary>
+      <p>Requires a computer running an operating system. The computer
+      must have some memory and ideally some kind of long-term storage.
+      An input device as well as some form of output device is
+      recommended.</p>
+    </details>
+  </body>
+</html>

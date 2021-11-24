@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/" target="_blank">
+    <title>&lt;blockquote&gt;</title>
+    <style>
+      blockquote{
+        margin: 0;
+      }
+      blockquote p{
+        padding: 15px;
+        background: #eee;
+        border-radius: 5px;
+      }
+      blockquote p::before{
+        content: '\201C';
+      }
+      blockquote p::after{
+        content: '\201D';
+      }
+    </style>
+  </head>
+  <body>
+    <figure>
+      <blockquote cite="https://www.huxley.net/bnw/four.html">
+        <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
+      </blockquote>
+      <figcaption>—Aldous Huxley, <cite>Brave New World</cite></figcaption>
+    </figure>
+
+    <figure>
+      <blockquote cite="https://tools.ietf.org/html/rfc1149">
+        <p>Avian carriers can provide high delay, low
+          throughput, and low altitude service.  The
+          connection topology is limited to a single
+          point-to-point path for each carrier, used with
+          standard carriers, but many carriers can be used
+          without significant interference with each other,
+          outside of early spring.  This is because of the 3D
+          ether space available to the carriers, in contrast
+          to the 1D ether used by IEEE802.3.  The carriers
+          have an intrinsic collision avoidance system, which
+          increases availability.</p>
+      </blockquote>
+    </figure>
+  </body>
+</html>

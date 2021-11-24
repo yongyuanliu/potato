@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_blank" href="/">
+    <base target="_slef" href="/">
+    <base target="_top" href="/">
+    <base target="_parent" href="/">
+  </head>
+  <body>
+    <h1> &lt;base&gt;: 文档根 URL 元素 </h1>
+    <ol>
+      <li>多个&lt;base&gt;元素，只会使用第一个 href 和 target 值，其余都会被忽略</li>
+      <li>
+        页内锚，执行文档中都某个片段的链接，例如 &lt;a href="#some-id"&gt;用 &lt;base&gt; 解析,触发对带有附加片段对基本 URL 对 HTTP 请求。<br>
+        例如：<br>
+        给定 &lt;base href="https://example.com" &gt;<br>
+        以及此链接 &lt;a href="#anchor"&gt;Anker&lt;a&gt;<br>
+        链接指向：https://example.com#anchor
+      </li>
+    </ol>
+    DOM接口：<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLBaseElement">HTMLBaseElement</a>
+
+    <pre>
+      <a>xx</a>
+    </pre>
+  </body>
+</html>

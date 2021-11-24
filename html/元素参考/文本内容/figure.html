@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/" target="_blank">
+    <title>figure</title>
+    <style>
+      figure{
+        border: thin #c0c0c0 solid;
+        display: flex;
+        flex-flow: column;
+        padding: 5px;
+        max-width: 220px;
+        margin: auto;
+        margin-top: 10px;
+      }
+      img, pre{
+        max-width: 220px;
+        max-height: 150px;
+      }
+      pre{
+        overflow-x: scroll;
+      }
+      figcaption{
+        background-color: #222;
+        color: #fff;
+        font: italic smaller sans-serif;
+        padding: 3px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <figure>
+      <img src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/elephant-660-480.jpg" alt="Elephant at sunset">
+      <figcaption>An elephant at sunset</figcaption> 
+    </figure>
+    <figure>
+      <img crossorigin="anonymous" src="https://developer.mozilla.org/static/img/favicon144.png"
+          alt="A robotic monster over the letters MDN.">
+    </figure>
+    <figure>
+      <figcaption>Get browser details using <code>navigator</code>.</figcaption>
+      <pre>
+      function NavigatorExample() {
+        var txt;
+        txt = "Browser CodeName: " + navigator.appCodeName;
+        txt+= "Browser Name: " + navigator.appName;
+        txt+= "Browser Version: " + navigator.appVersion ;
+        txt+= "Cookies Enabled: " + navigator.cookieEnabled;
+        txt+= "Platform: " + navigator.platform;
+        txt+= "User-agent header: " + navigator.userAgent;
+      }</pre>
+    </figure>
+  </body>
+</html>
